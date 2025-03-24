@@ -1,0 +1,50 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="50" y="30" width="400" height="340" rx="20" fill="#f8f9fa" filter="url(#shadow)"/>
+  
+  <!-- Phone outline -->
+  <rect x="120" y="50" width="260" height="300" rx="20" fill="#ffffff" stroke="#e0e0e0" stroke-width="3"/>
+  
+  <!-- Screen -->
+  <rect x="130" y="70" width="240" height="260" rx="5" fill="#f9f9f9"/>
+  
+  <!-- App header -->
+  <rect x="130" y="70" width="240" height="40" rx="5" fill="url(#grad1)"/>
+  <text x="155" y="95" font-family="Arial" font-size="14" fill="white" font-weight="bold">灵魂伴侣测试</text>
+  
+  <!-- Question screen -->
+  <text x="150" y="130" font-family="Arial" font-size="14" fill="#333" font-weight="bold">问题 3/10</text>
+  <rect x="150" y="140" width="200" height="5" rx="2.5" fill="#e0e0e0"/>
+  <rect x="150" y="140" width="60" height="5" rx="2.5" fill="url(#grad1)"/>
+  
+  <rect x="150" y="160" width="200" height="80" rx="10" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="170" y="190" font-family="Arial" font-size="13" fill="#333" font-weight="bold">TA是否能敏锐察觉你的情绪</text>
+  <text x="170" y="210" font-family="Arial" font-size="13" fill="#333" font-weight="bold">变化并主动关心？</text>
+  
+  <!-- Options -->
+  <rect x="150" y="260" width="90" height="40" rx="20" fill="white" stroke="url(#grad1)" stroke-width="2"/>
+  <text x="185" y="285" font-family="Arial" font-size="14" fill="#8e44ad" font-weight="bold" text-anchor="middle">是</text>
+  
+  <rect x="260" y="260" width="90" height="40" rx="20" fill="white" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="295" y="285" font-family="Arial" font-size="14" fill="#666" font-weight="bold" text-anchor="middle">否</text>
+  
+  <!-- Hearts decorations -->
+  <path d="M90,130 Q100,110 110,130 Q120,150 90,170 Q60,150 70,130 Q80,110 90,130 Z" fill="url(#grad1)" opacity="0.3" />
+  <path d="M410,250 Q420,230 430,250 Q440,270 410,290 Q380,270 390,250 Q400,230 410,250 Z" fill="url(#grad1)" opacity="0.3" />
+  <path d="M70,300 Q75,290 80,300 Q85,310 70,320 Q55,310 60,300 Q65,290 70,300 Z" fill="url(#grad1)" opacity="0.3" />
+  <path d="M430,100 Q435,90 440,100 Q445,110 430,120 Q415,110 420,100 Q425,90 430,100 Z" fill="url(#grad1)" opacity="0.3" />
+  
+  <!-- Home button -->
+  <circle cx="250" cy="340" r="10" fill="#f1f1f1" stroke="#e0e0e0" stroke-width="1"/>
+</svg>
+

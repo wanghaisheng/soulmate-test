@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 欢迎</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="onboarding-container">
+            <div class="onboarding-content">
+                <div class="onboarding-image">
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="40" y="50" width="120" height="100" rx="10" fill="white" stroke="url(#grad1)" stroke-width="3"/>
+                        <rect x="50" y="70" width="100" height="20" rx="5" fill="#f1f1f1"/>
+                        <rect x="50" y="100" width="100" height="20" rx="5" fill="#f1f1f1"/>
+                        <rect x="50" y="130" width="60" height="10" rx="5" fill="url(#grad1)"/>
+                        <circle cx="40" cy="40" r="15" fill="url(#grad1)" opacity="0.3"/>
+                        <circle cx="160" cy="160" r="20" fill="url(#grad1)" opacity="0.3"/>
+                    </svg>
+                </div>
+                
+                <h2 class="onboarding-title">科学评估方法</h2>
+                <p class="onboarding-description">我们的测试基于心理学研究，评估十个关键维度，准确分析你们的灵魂契合度。</p>
+                
+                <div class="onboarding-pagination">
+                    <div class="pagination-dot"></div>
+                    <div class="pagination-dot active"></div>
+                    <div class="pagination-dot"></div>
+                </div>
+            </div>
+            
+            <div class="onboarding-buttons">
+                <button class="btn btn-secondary btn-onboarding" onclick="window.location.href='onboarding1.html'">上一步</button>
+                <button class="btn btn-primary btn-onboarding" onclick="window.location.href='onboarding3.html'">下一步</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto redirect to next onboarding page after a delay
+        setTimeout(() => {
+            window.location.href = 'onboarding3.html';
+        }, 3000);
+    </script>
+</body>
+</html>
+

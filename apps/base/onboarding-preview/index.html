@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 欢迎</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="onboarding-container">
+            <div class="onboarding-content">
+                <div class="onboarding-image">
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="80" fill="white" stroke="url(#grad1)" stroke-width="4" />
+                        <path d="M70,80 Q100,60 130,80 Q160,130 100,160 Q40,130 70,80 Z" fill="url(#grad1)" />
+                        <circle cx="80" cy="90" r="8" fill="white" />
+                        <circle cx="120" cy="90" r="8" fill="white" />
+                    </svg>
+                </div>
+                
+                <h2 class="onboarding-title">发现真正的灵魂伴侣</h2>
+                <p class="onboarding-description">欢迎使用灵魂伴侣测试，通过10个简单问题，科学评估你们关系的契合度。</p>
+                
+                <div class="onboarding-pagination">
+                    <div class="pagination-dot active"></div>
+                    <div class="pagination-dot"></div>
+                    <div class="pagination-dot"></div>
+                </div>
+            </div>
+            
+            <div class="onboarding-buttons">
+                <button class="btn btn-secondary btn-onboarding" onclick="window.location.href='../index.html'">跳过</button>
+                <button class="btn btn-primary btn-onboarding" onclick="window.location.href='onboarding2.html'">下一步</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto redirect to next onboarding page after a delay
+        setTimeout(() => {
+            window.location.href = 'onboarding2.html';
+        }, 3000);
+    </script>
+</body>
+</html>
+

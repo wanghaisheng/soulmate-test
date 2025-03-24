@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 测试页</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Added auto-transition animation */
+        @keyframes fadeTransition {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .question-card {
+            animation: fadeTransition 0.3s ease-out;
+        }
+        
+        /* Disable the next button when no option is selected */
+        .btn-disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        /* Highlight the selected option */
+        .option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(142, 68, 173, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="test-container">
+            <div class="test-header">
+                <h1 class="test-title">灵魂伴侣测试</h1>
+                <p class="test-subtitle">回答以下问题，发现你们的契合度</p>
+            </div>
+            
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar" style="width: 10%;"></div>
+            </div>
+            
+            <div id="question-container" class="question-card">
+                <!-- Question content will be loaded dynamically -->
+            </div>
+            
+            <div class="test-nav-buttons">
+                <button id="prev-button" class="btn btn-secondary btn-test-nav" onclick="previousQuestion()">上一题</button>
+                <button id="next-button" class="btn btn-primary btn-test-nav btn-disabled" onclick="nextQuestion()">下一题</button>
+            </div>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <div class="nav-bar">
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <i class="fas fa-clipboard-list"></i>
+                <span>测试</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-book"></i>
+                <span>指南</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>我的</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="../../js/test-logic.js"></script>
+    <script>
+        // Initialize the test
+        document.addEventListener('DOMContentLoaded', function() {
+            initTest();
+        });
+    </script>
+</body>
+</html>

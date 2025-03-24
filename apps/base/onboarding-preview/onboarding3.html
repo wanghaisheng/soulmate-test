@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 欢迎</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="onboarding-container">
+            <div class="onboarding-content">
+                <div class="onboarding-image">
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#8e44ad;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#3498db;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="60" fill="white" stroke="url(#grad1)" stroke-width="3"/>
+                        <path d="M70,80 Q100,140 130,80" fill="none" stroke="url(#grad1)" stroke-width="3"/>
+                        <path d="M80,60 L80,80" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M120,60 L120,80" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="65" cy="170" r="15" fill="url(#grad1)" opacity="0.3"/>
+                        <circle cx="150" cy="50" r="20" fill="url(#grad1)" opacity="0.3"/>
+                    </svg>
+                </div>
+                
+                <h2 class="onboarding-title">开始你的旅程</h2>
+                <p class="onboarding-description">只需1分钟，了解你们是否是灵魂伴侣。准备好开始测试了吗？</p>
+                
+                <div class="onboarding-pagination">
+                    <div class="pagination-dot"></div>
+                    <div class="pagination-dot"></div>
+                    <div class="pagination-dot active"></div>
+                </div>
+            </div>
+            
+            <div class="onboarding-buttons">
+                <button class="btn btn-secondary btn-onboarding" onclick="window.location.href='onboarding2.html'">上一步</button>
+                <button class="btn btn-primary btn-onboarding" onclick="window.location.href='../app/test.html'">开始测试</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto redirect to test page after a delay
+        setTimeout(() => {
+            window.location.href = '../app/test.html';
+        }, 3000);
+    </script>
+</body>
+</html>
+

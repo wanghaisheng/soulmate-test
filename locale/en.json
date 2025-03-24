@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "title": "Discover if You Are Soulmates",
+    "subtitle": "10 simple questions to reveal the true compatibility of your relationship",
+    "cta": "Start Test",
+    "learn": "Learn More"
+  },
+  "problem": {
+    "title": "Do You Have These Questions?",
+    "card1": {
+      "title": "Are we really compatible?",
+      "desc": "You often feel uncertain about whether your relationship has a future"
+    },
+    "card2": {
+      "title": "Why do we always argue?",
+      "desc": "Even small things can easily lead to misunderstandings and conflicts"
+    },
+    "card3": {
+      "title": "Why is communication so difficult?",
+      "desc": "Sometimes it feels like you're speaking different languages"
+    }
+  },
+  "solution": {
+    "title": "How the Soulmate Test Helps You",
+    "desc": "Our Soulmate Test is built on relationship psychology, using 10 carefully designed questions to assess your compatibility in key dimensions, including:",
+    "point1": "Emotional connection and empathy",
+    "point2": "Alignment of values and life views",
+    "point3": "Communication style and conflict resolution",
+    "point4": "Mutual support and growth encouragement",
+    "point5": "Foundation of trust and level of rapport",
+    "cta": "Take the Test Now"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Answer 10 Questions",
+      "desc": "Simple, intuitive questions with only \"Yes\" or \"No\" options"
+    },
+    "step2": {
+      "title": "Get Your Results",
+      "desc": "Instantly see your soulmate compatibility score and detailed interpretation"
+    },
+    "step3": {
+      "title": "Receive Practical Advice",
+      "desc": "Get personalized suggestions to improve your relationship"
+    }
+  },
+  "testimonials": {
+    "title": "What Users Say",
+    "quote1": "\"The test results were surprisingly accurate! It helped us discover overlooked issues in our relationship, and now our communication is much better.\"",
+    "user1": "Lisa Wang, 26",
+    "quote2": "\"This test made us realize that even though we have different viewpoints, we have a high emotional compatibility. Highly recommended for couples in doubt!\"",
+    "user2": "Michael Zhang, 31"
+  },
+  "appPreview": {
+    "title": "App Screenshots",
+    "subtitle": "Explore different interface styles",
+    "openFullDemo": "Open Full App Demo"
+  },
+  "features": {
+    "title": "Key Features",
+    "card1": {
+      "title": "Privacy Protection",
+      "desc": "Your test data is stored locally and never uploaded to any server"
+    },
+    "card2": {
+      "title": "History Record",
+      "desc": "Track relationship changes and record test results from different periods"
+    },
+    "card3": {
+      "title": "Share Results",
+      "desc": "Generate beautiful result cards to easily share on social media"
+    },
+    "card4": {
+      "title": "Relationship Guide",
+      "desc": "Professional relationship improvement advice and communication skills"
+    }
+  },
+  "pricing": {
+    "title": "Subscription Plans",
+    "subtitle": "Choose the plan that works best for you",
+    "popular": "Most Popular",
+    "free": {
+      "title": "Free",
+      "period": "Forever Free",
+      "feature1": "Basic test (10 questions)",
+      "feature2": "Basic result analysis",
+      "feature3": "Ad supported",
+      "feature4": "History record (only 1)",
+      "feature5": "No detailed report",
+      "feature6": "No relationship advice",
+      "cta": "Start Free Test"
+    },
+    "premium": {
+      "title": "Premium",
+      "period": "/month",
+      "original": "Original: $3.99/month",
+      "feature1": "Advanced test (20 questions)",
+      "feature2": "Detailed result analysis",
+      "feature3": "Ad-free experience",
+      "feature4": "Unlimited history records",
+      "feature5": "Personalized relationship advice",
+      "feature6": "Priority access to new features",
+      "cta": "Choose Premium"
+    },
+    "lifetime": {
+      "title": "Lifetime",
+      "period": "One-time payment",
+      "original": "Original: $39.99",
+      "feature1": "All Premium features",
+      "feature2": "Lifetime free updates",
+      "feature3": "One professional consultation",
+      "feature4": "Relationship improvement e-book",
+      "feature5": "Partner sharing account",
+      "feature6": "30-day money-back guarantee",
+      "cta": "Choose Lifetime"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "What is the scientific basis for this test?",
+    "a1": "This test is based on modern relationship psychology research and practical experience, combining 10 key dimensions that are most predictive in intimate relationships. Through tracking studies of thousands of couples, we have determined that these questions can effectively assess the long-term compatibility of a relationship.",
+    "q2": "Do I need to complete the test with my partner?",
+    "a2": "While it's ideal for both partners to complete the test together, completing it individually can also provide valuable insights. In the Premium version, we offer comparative analysis of both partners' test results, helping you gain a more comprehensive understanding of each other's feelings and expectations.",
+    "q3": "If the test results are not ideal, does it mean our relationship has no hope?",
+    "a3": "Absolutely not! The test results are only a reference, and even if the compatibility is low, it indicates room for improvement rather than a signal to end the relationship. Our Premium version provides targeted relationship improvement suggestions to help you grow together and deepen understanding.",
+    "q4": "Can I cancel my subscription at any time?",
+    "a4": "Yes, you can cancel your monthly subscription at any time without additional charges. After cancellation, you can continue to use the service until the end of the current billing cycle. The Lifetime version is a one-time payment, so you don't need to worry about renewal issues."
+  },
+  "cta": {
+    "title": "Ready to Start Your Soulmate Journey?",
+    "subtitle": "Just 10 simple questions to deeply understand your relationship compatibility",
+    "start": "Start Free Test",
+    "view": "View Subscription Plans",
+    "guarantee": "30-day Unconditional Money-Back Guarantee"
+  },
+  "footer": {
+    "slogan": "Discover True Soulmate Compatibility",
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "careers": "Careers",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "support": "Support",
+    "help": "Help Center",
+    "faq": "FAQ",
+    "feedback": "Feedback",
+    "copyright": "© 2023 Soulmate Test. All rights reserved."
+  }
+}
+

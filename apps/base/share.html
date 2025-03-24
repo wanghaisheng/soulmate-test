@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 分享结果</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .share-container {
+            height: calc(100% - 44px);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .share-image-container {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        
+        .share-image-container img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .shared-score {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            line-height: 1;
+        }
+        
+        .score-label {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .take-test-cta {
+            margin-top: auto;
+            padding-top: 30px;
+        }
+        
+        /* Added loading indicator */
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Social share buttons */
+        .social-share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 12px;
+        }
+
+        .social-button i {
+            font-size: 24px;
+            margin-bottom: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .social-button:hover i {
+            transform: scale(1.1);
+            background-color: var(--primary-light);
+            color: white;
+        }
+    </style>
+    
+    <!-- Social sharing meta tags -->
+    <meta property="og:title" content="灵魂伴侣测试结果">
+    <meta property="og:description" content="查看我的灵魂伴侣契合度得分！">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="share-container">
+            <h1 class="test-title">灵魂伴侣测试</h1>
+            <p class="test-subtitle">来自朋友的分享</p>
+            
+            <div id="loading" class="loading-container">
+                <div class="loading-spinner"></div>
+                <p>正在生成结果图片...</p>
+            </div>
+            
+            <div id="share-content" style="display: none;">
+                <div class="share-image-container">
+                    <img id="share-result-image" src="" alt="测试结果图片">
+                </div>
+                
+                <div class="shared-score" id="shared-score">8</div>
+                <div class="score-label">灵魂契合度得分</div>
+                
+                <div id="share-interpretation" class="score-interpretation">强烈灵魂伴侣特质！</div>
+                
+                <p id="share-details" class="details-text" style="margin-bottom: 30px;"></p>
+
+                <div class="social-share-buttons">
+                    <a href="#" class="social-button" id="wechat-share">
+                        <i class="fab fa-weixin"></i>
+                        <span>微信</span>
+                    </a>
+                    <a href="#" class="social-button" id="weibo-share">
+                        <i class="fab fa-weibo"></i>
+                        <span>微博</span>
+                    </a>
+                    <a href="#" class="social-button" id="qq-share">
+                        <i class="fab fa-qq"></i>
+                        <span>QQ</span>
+                    </a>
+                    <a href="#" class="social-button" id="more-share">
+                        <i class="fas fa-share-alt"></i>
+                        <span>更多</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="take-test-cta">
+                <a href="app/test.html" class="btn btn-primary pulse-animation">立即测试你的契合度</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/test-logic.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Get score from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const score = parseInt(urlParams.get('score')) || 8;
+            
+            // Update meta tags for better social sharing
+            const metaTitle = document.querySelector('meta[property="og:title"]');
+            metaTitle.content = `灵魂伴侣测试结果 - ${score}/10`;
+            
+            const metaDesc = document.querySelector('meta[property="og:description"]');
+            metaDesc.content = `我的灵魂契合度得分是 ${score}/10！快来测测你的分数吧！`;
+            
+            // Update UI
+            document.getElementById('shared-score').textContent = score;
+            
+            // Update interpretation
+            const interpretation = document.getElementById('share-interpretation');
+            let interpretationText = '';
+            if (score >= 8) {
+                interpretationText = '强烈灵魂伴侣特质！';
+            } else if (score >= 5) {
+                interpretationText = '深度契合但有提升空间';
+            } else {
+                interpretationText = '建议深入沟通关键分歧点';
+            }
+            interpretation.textContent = interpretationText;
+            
+            // Update details text
+            const detailsText = document.getElementById('share-details');
+            if (score >= 8) {
+                detailsText.textContent = `达到了${score}分，表明存在很强的灵魂伴侣特质。在情感共鸣、价值观、相互信任等核心维度表现出高度一致性。`;
+            } else if (score >= 5) {
+                detailsText.textContent = `达到了${score}分，表明有着良好的灵魂契合基础，但在某些关键维度仍有提升空间。`;
+            } else {
+                detailsText.textContent = `为${score}分，表明在关键维度存在一些分歧。建议通过深入沟通增进彼此理解。`;
+            }
+            
+            // Generate and display shareable image
+            try {
+                const imageUrl = await generateShareableImage(score);
+                document.getElementById('share-result-image').src = imageUrl;
+                
+                // Add image meta tag for social media
+                const metaImage = document.createElement('meta');
+                metaImage.setAttribute('property', 'og:image');
+                metaImage.content = imageUrl;
+                document.head.appendChild(metaImage);
+                
+                // Setup social share buttons
+                const shareText = `我的灵魂契合度得分是 ${score}/10！快来测测你的分数吧！`;
+                const shareUrl = window.location.href;
+                
+                document.getElementById('wechat-share').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('请截图保存，并在微信中分享');
+                });
+                
+                document.getElementById('weibo-share').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.open(`http://service.weibo.com/share/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareText)}`, '_blank');
+                });
+                
+                document.getElementById('qq-share').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.open(`http://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent('灵魂伴侣测试结果')}&desc=${encodeURIComponent(shareText)}`, '_blank');
+                });
+                
+                document.getElementById('more-share').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (navigator.share) {
+                        navigator.share({
+                            title: '灵魂伴侣测试结果',
+                            text: shareText,
+                            url: shareUrl
+                        }).catch((error) => console.log('分享失败:', error));
+                    } else {
+                        alert('您的浏览器不支持原生分享功能，请手动分享链接');
+                    }
+                });
+                
+                // Hide loading, show content
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('share-content').style.display = 'block';
+            } catch (error) {
+                console.error('Failed to generate image:', error);
+                document.getElementById('loading').innerHTML = '<p>图片生成失败，请重试</p>';
+            }
+        });
+    </script>
+</body>
+</html>

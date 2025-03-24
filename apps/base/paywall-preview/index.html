@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂伴侣测试 - 高级版</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-bar-time">9:41</div>
+            <div class="status-bar-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        
+        <div class="paywall-container">
+            <div class="paywall-header">
+                <h1 class="paywall-title">解锁高级功能</h1>
+                <p class="paywall-subtitle">获取专业分析和个性化建议</p>
+            </div>
+            
+            <div class="premium-features">
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h3 class="feature-title">详细分析报告</h3>
+                        <p class="feature-description">获取10个关键维度的深度解读</p>
+                    </div>
+                </div>
+                
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h3 class="feature-title">个性化提升建议</h3>
+                        <p class="feature-description">针对你们关系的专业改善方案</p>
+                    </div>
+                </div>
+                
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h3 class="feature-title">无限历史记录</h3>
+                        <p class="feature-description">跟踪你们关系的变化和进展</p>
+                    </div>
+                </div>
+                
+                <div class="premium-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h3 class="feature-title">无广告体验</h3>
+                        <p class="feature-description">享受纯净无干扰的使用体验</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="subscription-plans">
+                <div class="plan-toggle">
+                    <div class="plan-option active">月度</div>
+                    <div class="plan-option">年度</div>
+                </div>
+                
+                <div class="plan-card selected">
+                    <div class="plan-radio"></div>
+                    <div class="plan-details">
+                        <div class="plan-name">月度会员</div>
+                        <div class="plan-price">¥18/月</div>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-radio"></div>
+                    <div class="plan-details">
+                        <div class="plan-name">年度会员</div>
+                        <div class="plan-price">¥128/年 (节省40%)</div>
+                    </div>
+                    <div class="plan-badge">最划算</div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-radio"></div>
+                    <div class="plan-details">
+                        <div class="plan-name">终身会员</div>
+                        <div class="plan-price">¥198 一次性付款</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paywall-actions">
+                <button class="payment-button">立即订阅 ¥18/月</button>
+                <p class="terms-text">
+                    订阅即表示你同意我们的<a href="#">服务条款</a>和<a href="#">隐私政策</a>。可随时在账户设置中取消订阅。
+                </p>
+            </div>
+            
+            <div class="close-paywall">
+                <button class="btn-close" onclick="window.location.href='../app/results.html'">暂不需要，返回结果</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Plan selection
+        const planCards = document.querySelectorAll('.plan-card');
+        planCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Remove selected class from all cards
+                planCards.forEach(c => c.classList.remove('selected'));
+                
+                // Add selected class to clicked card
+                card.classList.add('selected');
+                
+                // Update button text based on selected plan
+                const paymentButton = document.querySelector('.payment-button');
+                const planName = card.querySelector('.plan-name').textContent;
+                const planPrice = card.querySelector('.plan-price').textContent.split(' ')[0];
+                
+                paymentButton.textContent = `立即订阅 ${planPrice}`;
+            });
+        });
+        
+        // Plan toggle
+        const planOptions = document.querySelectorAll('.plan-option');
+        planOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                // Remove active class from all options
+                planOptions.forEach(o => o.classList.remove('active'));
+                
+                // Add active class to clicked option
+                option.classList.add('active');
+                
+                // Here you would typically update the plans displayed
+                // This is just a demo so we're not implementing that fully
+            });
+        });
+    </script>
+</body>
+</html>
+
